@@ -5,15 +5,15 @@ public class Main {
         /** Khi nhiều luồng cùng update cùng 1 biến sẽ xảy ra lỗi Race Condition, dữ liệu không được đảm bảo */
         new SynchronizedSolution().raceConditionProblem();
 
-        System.out.println("-----------Synchronized Solution Start-----------------");
+        System.out.println("\n-----------Synchronized Solution Start-----------------");
         /**  Khi nhiều luồng cùng update cùng 1 thuộc tính đồng bộ dùng Synchronized, kết quả sẽ đúng nhưng vì lock nên time tăng cao */
         new SynchronizedSolution().synchronizedSolution();
 
-        System.out.println("-----------Visibility Problem Start-----------------");
+        System.out.println("\n-----------Visibility Problem Start-----------------");
         /** TÍnh hiển thị sẽ sai khi cả 2 luồng cùng update 1 trường */
         new VolatileSolution().visibilityProblem();
 
-        System.out.println("-----------Volatile Solution Start-----------------");
+        System.out.println("\n-----------Volatile Solution Start-----------------");
         /**
          * Volatile đảm bảo kết quả được đẩy xuống ram luôn để các luồng khác đọc được kết quả mới nhất, không đảm bảo cho cập nhật nhiều luồng cùng lúc,
          * điều này giúp tránh performance với solution là chỉ duy nhất 1 luồng ghi và các luồng khác luôn đọc được kết quả mới nhất

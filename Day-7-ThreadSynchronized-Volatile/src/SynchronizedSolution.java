@@ -30,7 +30,7 @@ public class SynchronizedSolution {
         t1.join();
         t2.join();
         long end = System.currentTimeMillis();
-        System.out.println("Kết quả cuối cùng (không đồng bộ): " + count + ", time: " + (end - start) + " ms");
+        System.out.println("Kết quả cuối cùng (không đồng bộ, expect 200.000): " + count + ", time: " + (end - start) + " ms");
     }
 
     public void synchronizedSolution() throws InterruptedException {
@@ -52,7 +52,7 @@ public class SynchronizedSolution {
         t1.join();
         t2.join();
         long end = System.currentTimeMillis();
-        System.out.println("Kết quả cuối cùng (đồng bộ với synchronized): " + count + ", time: " + (end - start) + " ms");
+        System.out.println("Kết quả cuối cùng (đồng bộ với synchronized, expect 200.000): " + count + ", time: " + (end - start) + " ms");
     }
 
 }

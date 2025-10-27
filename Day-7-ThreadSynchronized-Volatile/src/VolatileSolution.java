@@ -26,9 +26,6 @@ public class VolatileSolution {
                 }
             }
 
-            if (!running) {
-                System.out.println("Luồng đọc: phát hiện running = false, kết thúc!");
-            }
         });
 
         reader.start();
@@ -36,7 +33,6 @@ public class VolatileSolution {
 
         writer.join();
         reader.join();
-        System.out.println("Main thread: cả hai thread đã kết thúc!");
     }
     public void volatileSolution() throws InterruptedException {
         Thread writer = new Thread(() -> {
@@ -63,6 +59,5 @@ public class VolatileSolution {
 
         writer.join();
         reader.join();
-        System.out.println("Main thread: cả hai thread đã kết thúc!");
     }
 }
